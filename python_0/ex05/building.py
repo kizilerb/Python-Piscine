@@ -1,13 +1,17 @@
 import sys
 
 def main():
-    if len(sys.argv) == 1:
-        print("Please provide a string to run the program.")
-        return(1)
-    elif len(sys.argv) > 2:
+    if len(sys.argv) > 2:
         print("AssertionError: more than one argument is provided")
         return(1)
-    str = sys.argv[1]
+    elif len(sys.argv) == 1:
+        print("What is the text to count?")
+        str = sys.stdin.readline()
+        if str == "":
+            print("\nEOF detected. Exiting...")
+            sys.exit(1)
+    else:
+        str = sys.argv[1]
     punctuations = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
     upper_count = sum(1 for char in str if char.isupper())
     lower_count = sum(1 for char in str if char.islower())
