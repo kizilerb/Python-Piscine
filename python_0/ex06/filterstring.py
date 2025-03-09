@@ -2,9 +2,9 @@ import sys
 from ft_filter import ft_filter
 
 def filterstring(str):
-    sort = lambda input: True if len(input) > int(sys.argv[2]) else False
-    separate = str.split()
-    sorted = list(ft_filter(sort, separate))
+    sort_func = lambda input: True if len(input) > int(sys.argv[2]) else False
+    separated = str.split()
+    sorted = list(ft_filter(sort_func, separated))
     print(sorted)
 
 def main():
