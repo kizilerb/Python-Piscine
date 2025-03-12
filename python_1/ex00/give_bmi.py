@@ -15,6 +15,7 @@ def give_bmi(
                 bmi_values.append(w/(h**2))
     except Exception as e:
         print("Error:", e)
+        return []
     return bmi_values
 
 
