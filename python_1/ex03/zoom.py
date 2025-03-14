@@ -22,7 +22,7 @@ def zooming(image, h, w):
 
 
 def main():
-    image = ft_load("./animal.jpg")
+    image = ft_load("./animal.jpeg")
     print(image)
     # converting image from array to image and in a grayscale format
     img2zoom = img.fromarray(image)
