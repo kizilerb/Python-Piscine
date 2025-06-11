@@ -7,8 +7,8 @@ def all_thing_is_obj(object: any) -> int:
     }
     if type(object) in type_messages:
         print(type_messages[type(object)], ":", type(object))
-    elif type(object) == str:
+    elif isinstance(object, str):
         print(object, "is in the kitchen :", type(object))
-    else :
+    else:
         print("Type not found")
-    return(42)
+    return (42)
