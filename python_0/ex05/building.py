@@ -13,12 +13,6 @@ def main():
         if len(sys.argv) > 2:
             raise AssertionError("more than one argument is provided")
         elif len(sys.argv) == 1:
-            """
-            Parse: If None or nothing is provided,
-            the user is prompted to provide a string.
-            Expected outputs: (the carriage return counts as a space,
-            if you don't want to return one use ctrl + D)
-            """
             print("What is the text to count?")
             str = sys.stdin.readline()
             if str == "":

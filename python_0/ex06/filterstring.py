@@ -16,7 +16,9 @@ def is_num(N):
 
 def filterstring(str):
     """
-    Words are separated from each other by space characters, casted to a list.
+    Words are separated from each other by space characters, the output
+    from ft_filter() is casted to a list function input of ft_filter is 
+    a lambda function that process integer given in the arguments.
     """
     separated = str.split()
     num = int(sys.argv[2])
