@@ -1,19 +1,16 @@
 import sys
-"""
-A real autonomous program, with a main, which takes
-a single string argument and displays the sums of its
-upper-case characters, lower-case
-characters, punctuation characters, digits and spaces.
-"""
 
 
 def main():
+    """
+    Argument validity is checked and if it is not an valid argument for
+    example there is more than one argument AssertionError exception's raised.
+    If there is no argument is given, the argument is taken through readline
+    function. Readline function is also used to provide control-D functioning.
+    Arguments are taken with sys.argv in list type.
+    """
     try:
         if len(sys.argv) > 2:
-            """
-            Parse: If more than one argument is provided to the program,
-            print an AssertionError.
-            """
             raise AssertionError("more than one argument is provided")
         elif len(sys.argv) == 1:
             """
@@ -29,11 +26,18 @@ def main():
                 return (0)
         else:
             str = sys.argv[1]
+        process_str(str)
     except AssertionError as error:
         print("AssertionError:", error)
         return (1)
+
+
+def process_str(str):
     """
-    Checking the counts of different types of characters in the given argument
+    Checking the counts of different types of characters in the given
+    argument by sum() function. After getting counts of upper-case characters
+    lower-case, characters, punctuation characters, digits and spaces, it is
+    displayed thorugh print() function.
     """
     punctuations = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
     upper_count = sum(1 for char in str if char.isupper())
