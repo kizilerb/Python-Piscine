@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import PIL.Image as img
 
-
+#croplanmaması gerekiyor gibi geldi subjectte size aynı kalmış, kare fotoğraf bul
 def cropping(image, h, w):
     cropped = image.crop(((w//2)-250, (h//2)-250, (w//2)+250, (h//2)+250))
     transposed = np.transpose(cropped)

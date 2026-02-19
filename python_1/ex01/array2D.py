@@ -4,7 +4,7 @@ import numpy as np
 def slice_me(family: list, start: int, end: int) -> list:
     try:
         if not isinstance(family, list):
-            raise AssertionError("List should be inserted as an argumment")
+            raise AssertionError("List should be inserted as an argument")
         elif not isinstance(start,int) and isinstance(end,int):
             raise AssertionError("Start and end values should be an integer")
         elif not all(len(i) == len(family[0]) for i in family):

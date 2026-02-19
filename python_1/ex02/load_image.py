@@ -6,7 +6,7 @@ import os
 def ft_load(path: str) -> np.array:
     try:
         if not path.lower().endswith((".jpg", ".jpeg")):
-            raise AssertionError("Only JPG and JPEG file formats are handled")
+            raise AssertionError(f"Only JPG and JPEG file formats are handled: {path} is not valid")
         elif not os.path.exists(path) or not os.path.isfile(path):
             raise AssertionError("Please use a valid file path")
         image = img.open(path)
